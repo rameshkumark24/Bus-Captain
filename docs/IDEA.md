@@ -334,3 +334,203 @@ These are product rules now. P-items (approved 2026-11-23) point to findings in 
 | P-12 | Credits & licences screen carries the libGDX Apache-2.0 licence and NOTICE, the FreeType credit line (if gdx-freetype is used) and the OFL text. No GPL/AGPL dependencies, ever | L-13 |
 | P-13 | Recruit ~20 testers (6 more than the 14 you have) and plan how to keep them playing for the full 14 days | X-01 |
 | P-14 | v1.1: block gambling and real-money-game ad categories in AdMob | L-10 |
+
+---
+
+## Business verdict
+
+> Worked out 2026-11-24 from this file, [RESEARCH.md](RESEARCH.md) and [COMPETITORS.md](COMPETITORS.md), including its USP section.
+>
+> **Labels:**
+> - **SEEN** — a price, fee or number I opened, linked, with the date;
+> - **DERIVED** — worked out from seen numbers, with the formula shown;
+> - **ASSUMED** — a guess, with what would confirm it.
+>
+> Money is in ₹. **$1 ≈ ₹93.5** [ASSUMED: mid-market rate of 18 Nov 2026 per [therighttrader](https://therighttrader.com/convert/1-usd-to-inr); confirm on xe.com]. **No price is put on your hours**; your bar gives none.
+
+**Verdict (it rests on ASSUMED reach numbers): DO IT — the first version is the test.**
+- The likely case earns **about ₹3,900 a month at month 12**, which is 39% of your ₹10,000 bar.
+- Reaching the bar needs **about 260 organic installs a day**. That's RARE for a zero-budget idle game; the likely case gets about 100.
+- But the first version costs **₹0 in cash** and **about 12 weeks** at your 10 hours a week, and it's the only thing that can measure that number. Build it, with the stop rule in §8.
+
+### The bar and the first version
+- **What I want back** [F, 2026-11-24]: **₹10,000 a month by month 12 after public launch.** Money decides; there's no separate players target.
+- **What I can put in** [F]: up to **10 hours a week** of review and testing. No new money without returns.
+- **What I already have** [F]: a personal Play account (fee already paid), 14 testers, a 2–3 GB test phone, a public repo.
+- **Where I sell first** [F]: Google Play, **India only** (P-1).
+- **The first version:** §8 of this file (15 screens; Coimbatore → Tiruppur → Ooty; livery v1 + share card; prestige; no ads, no purchases). **Money only starts with v1.1** (rewarded ads, players 18+ only) **and v1.2** (in-app purchases).
+
+### 1. Who pays
+
+| Payer | Pays for | What they pay today | A price they'd accept |
+|---|---|---|---|
+| **Advertisers, through AdMob** | Opt-in rewarded ad views by players aged 18+ (P-5, U-3) | India rewarded-video rates of **$0.70–$4.00 per 1,000 views** are reported by ad vendors ([vmobify](https://vmobify.com/blog/casual-game-marketing-strategy), [getkoro](https://getkoro.app/blog/how-much-do-rewarded-video-ads-pay-for-indian-d2c-brands-e-commerce-sellers-2026), [cas.ai](https://cas.ai/?p=11066)). Used here: **$1.50** [ASSUMED — confirm with your AdMob Benchmark report once the account exists: **owner task**] | — |
+| **Players** (any age; Google Play handles payment and parental controls) | Cosmetics: pattern packs **₹49**, starter pack **₹79** (no coins, P-6), "skip the ad" pass **₹99** | Per-item price ranges on Play India [SEEN 2026-11-24]: Bus Sim Kerala ₹20–₹80 · City Transportation Tycoon ₹20–₹500 · Bus Masters: India ₹99–₹1,699 · Terminal Master ₹200–₹2,000 · Bus Livery Tamilnadu ₹9–₹16,700. Terminal Master's remove-ads, quoted in a review at "$9.9…" ≈ **₹925** [DERIVED: $9.90 × 93.5] | **₹49–₹99 per item**: the low end of what Indian bus-game players pay today, inside Bus Sim Kerala's ₹20–₹80 band [DERIVED]. That they'd accept it is ASSUMED; v1.2's conversion confirms it |
+
+Under-18 players see no ads, so any money from them comes through purchases, often on a parent's payment method [ASSUMED].
+
+### 2. The reachable market — bottom-up, year one (India, Google Play only)
+
+| Channel | Year-one installs | Basis |
+|---|---|---|
+| Testers' own circles at launch | ~200 | ASSUMED: 20 testers (P-13) × ~10 installs each. Confirm at launch |
+| **Play Store search for Tamil bus terms** | **~36,500 (≈100 a day)** | ASSUMED, anchored on the pull of the most popular Tamil bus-livery app (Tamil Bus Mods & Liverys) — see below |
+| Share cards (U-1) | +11% | ASSUMED: each install brings 0.1 more. Success check 2 measures it |
+| **Likely year-one total** | **≈ 40,700 installs** | DERIVED: (36,500 + 200) × 1.11 |
+| Worst / best | **~2,000 / ~260,000** | Worst: 5 a day from search, 0.03 shares per install. That's like the idle bus tycoons nobody found: Idle Bus Station Tycoon has **181** lifetime installs and Idle Transit **38** [SEEN 2026-11-23, Play page data]. Best: 500 a day, 0.3 shares per install — a quarter of Bus Sim Kerala's lifetime average of ≈2,120 a day [DERIVED: 3,949,411 installs ÷ 1,862 days since its first review in Oct 2021] |
+
+**How the "100 a day" anchor was built:**
+- Tamil Bus Mods & Liverys has **567,940** installs [SEEN 2026-11-24]. That's **≈245 a day** over its life [DERIVED: ÷ 2,316 days since its first review, 22 Jul 2020].
+- Its *current* pull is uncertain, somewhere between:
+  - **≈40 a day**: only 8 of its 386 reviews are dated 2026 [DERIVED: 567,940 × 8/386 ÷ 328 days];
+  - **≈1,000 a day**: its install number rose by 1,089 between my 23 and 24 Nov readings [SEEN both]. Google's refresh interval isn't known, so this may cover several days.
+- We take ~40% of the middle (245 a day), because those searchers want sim content and we're a tycoon [ASSUMED].
+
+Not counted: Instagram and YouTube fan pages (sizes NOT VERIFIED) and Play featuring.
+
+### 3. The cost of the first version
+
+**To build:** 18 working slices × 2 sessions each (I build, then you review and test) = **36 sessions** [DERIVED]. The slices:
+1. Project setup
+2. Tamil text spike
+3. Economy core + unit tests
+4. Balance simulator
+5. Depot scene (masked bus art)
+6. Bus cycle + payout feel
+7. Routes, upgrades, manager
+8. Save, offline earnings, clock checks
+9. Garage (4 models)
+10. Map + 3 cities (incl. Ooty ghat)
+11. Prestige
+12. Livery editor + Tamil name entry
+13. First-minute paint (U-1) + share card
+14. English/Tamil strings + native check (U-5)
+15. Settings, help & complaints, credits, stats
+16. Sound, conductor calls, low-end phone pass
+17. Release prep (policy page, Data safety, listing with U-2, signing)
+18. Closed-test fixes
+
+Time:
+- Your time is about 2.5 hours per session [ASSUMED: testing on the phone plus written feedback; confirm after M0]. 36 × 2.5 h = 90 h, so **~9 weeks at 10 h a week** [DERIVED].
+- Waits nobody can shorten: **14 days of continuous closed testing**, then a production review that "usually takes seven days or less" [SEEN 2026-11-23, [Play testing requirements](https://support.google.com/googleplay/android-developer/answer/14151465)]. That adds **~3 weeks**.
+- **About 12 weeks to public launch** — roughly **late Feb 2027** if work starts on 1 Dec 2026 [DERIVED; start date ASSUMED].
+
+**Cash before the first user: ₹0.** Each item:
+
+| Item | Needed to launch? | Cost |
+|---|---|---|
+| Google Play developer account | Yes | Already paid [F] → **₹0** |
+| A privacy policy at a public URL, linked in the app | Yes — required even for apps that collect nothing ([Play User Data policy](https://support.google.com/googleplay/android-developer/answer/10144311)) | GitHub Pages is free ([limits](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)) → **₹0** |
+| Server, APIs, domain | No — offline game, no backend | **₹0** |
+| Art, fonts, sounds | Yes | CC0 / OFL / made in-house → **₹0** |
+| Test phone, testers | Yes | Owner has both [F] → **₹0** |
+| Lawyer | **No.** No rule makes v1 need one: v1 collects no data and sells nothing (RESEARCH.md L-16) | **₹0** |
+| Trademark search | Yes, before the first upload (P-8) | IP India's public search is free → **₹0** |
+
+**Later, if it grows:**
+- Legal advice before v1.1 (DPDP, age gating, ads) and before v1.2 (e-commerce terms). Price NOT VERIFIED; ASSUMED ₹5,000–₹15,000 per consultation — get two or three quotes.
+- A chartered accountant once money arrives: ASSUMED ₹2,000–₹5,000 a year.
+- A trademark filing, optional: fee NOT VERIFIED here.
+- An organisation account, only if you want your home address off the store page (L-12).
+
+**To run each month:**
+- **₹0 fixed**: no hosting, no paid APIs.
+- On purchases, Google keeps **15%** of the first $1M a year once you've enrolled in the 15% tier. There's **no separate billing fee for India** (that "+5% billing fee" appears only in the AU/EEA/JP/UK/US table) [SEEN 2026-11-24, [service fees](https://support.google.com/googleplay/android-developer/answer/112622)]. Google may change this rate for India later; no date is given.
+- Google also withholds **0.1%** of each purchase price (excluding GST) when your PAN is on file, or 5% without it [SEEN 2026-11-23, [withholding tax](https://support.google.com/googleplay/android-developer/answer/9384608)].
+- Ad income is reported after Google's share [ASSUMED].
+
+**To win one paying user:**
+- **₹0 in cash** through organic search and share cards.
+- Paid ads lose money:
+  - An install costs about **₹7.50–₹19** [ASSUMED from reported India casual-game install costs of $0.08–$0.20: [Playio](https://blog.playio.co/mobile-game-cpi-benchmarks-2026), [vmobify](https://vmobify.com/blog/app-install-cost-india)].
+  - An install earns about **₹1.16** in the likely case [DERIVED: ₹0.29 a day × 4 active days], a loss of ₹6–₹18 per install.
+  - Bought *paying* users would cost **₹1,500–₹3,700 each** [DERIVED: install cost ÷ an ASSUMED 0.5% of installs who ever pay], against a value of about ₹84–₹168 each.
+  - **No paid ads.**
+
+### 4. The ROI math — at month 12 after public launch, against the ₹10,000/month bar
+
+| | Worst | **Likely** | Best | Label |
+|---|---|---|---|---|
+| Installs a month (steady state, including shares) | 165 | **3,330** | 21,450 | DERIVED from §2 ÷ 12 |
+| Active days per install over its life | 2.5 | **4** | 8 | ASSUMED, anchored on GameAnalytics 2026: median day-30 retention ≈0.7%, top 10% ≈4% ([summary](https://investgame.net/wp-content/uploads/2026/01/2026-01-27-2026-mobile-pc-benchmarks_compressed.pdf)). "Likely" implies about 1.5% at day 30, above the median, on the bet that idle games retain better. v1's day-30 data confirms it |
+| **Daily players at month 12** | 14 | **444** | 5,720 | DERIVED: installs a month × active days ÷ 30 |
+| Share of players aged 18+ (who may see ads) | 35% | 50% | 60% | ASSUMED; v1.1's age screen measures it |
+| Rewarded views per adult player per day | 1 | 2 | 3 | ASSUMED; confirmed by AdMob data |
+| Ad rate per 1,000 views | $0.80 | **$1.50** | $3.00 | ASSUMED, from the reported $0.70–$4.00 (§1) |
+| Ad income per daily player per day | ₹0.03 | **₹0.14** | ₹0.50 | DERIVED: share × views × rate ÷ 1,000 × 93.5 |
+| Players who buy in a month (of monthly players) · daily ÷ monthly players | 0.3% · 10% | **0.8% · 15%** | 1.5% · 20% | ASSUMED; v1.2 measures it. 15% is our own success check |
+| Purchase income per daily player per day | ₹0.08 | **₹0.15** | ₹0.21 | DERIVED: (1 ÷ daily/monthly) × buyer share × ₹84 net (₹99 − 15%) ÷ 30 |
+| **Income per daily player per day** | ₹0.11 | **₹0.29** | ₹0.71 | DERIVED |
+| **Income a month at month 12** | **≈ ₹50** | **≈ ₹3,900** | **≈ ₹1,22,000** | DERIVED: daily players × 30 × income per player per day |
+| Against the ₹10,000 bar | misses | **misses (39%)** | beats (12×) | DERIVED |
+
+- **Paying users needed to cover running costs: 0**, because running costs are ₹0.
+- **To reach the bar:** about **119 paying users a month** if purchases alone had to do it [DERIVED: ₹10,000 ÷ ₹84], or **≈1,150 daily players** with the likely ads-plus-purchases mix [DERIVED: ₹10,000 ÷ (30 × ₹0.29)].
+- **Months to break even:**
+  - **Month 0 in cash**, because nothing is spent.
+  - If you later pay ~₹10,000 for legal advice before v1.1 [ASSUMED price], that's earned back in about **3 months** of ads in the likely case, under a month in the best, and **never** in the worst. **So buy advice only after the stop rule has passed.**
+- **Months to reach the bar:**
+  - best: about **month 3–4** after public launch (ads start around month 2);
+  - likely: **not within 12 months** — month 12 earns ₹3,900, 39% of the bar;
+  - worst: never [DERIVED].
+
+### 5. The one number that decides it
+
+**Organic installs per day.**
+- It swings the result most: from 5 to 500 a day (×100). Compare income per player (₹0.11–₹0.71, ×6.5) and active days per install (2.5–8, ×3.2).
+- **Value at which the likely case reaches the bar: ≈260 a day** [DERIVED: 1,150 daily players × 30 ÷ 4 active days = 8,620 installs a month, ÷ 1.11 for shares ÷ 30 days]. The likely case assumes 100.
+
+**RARE** for this kind of app:
+- Zero-budget idle bus tycoons we can see sit at **181** and **38** installs in their whole lives [SEEN 2026-11-23].
+- 260 a day is about what **the most popular Tamil bus-livery app has averaged for six years** (≈245 a day [DERIVED]).
+
+It would be *ordinary* only for an app that already has Tamil Nadu bus fans' attention. That's exactly what v1 tests.
+
+### 6. What kills it — none of these is fatal on its own
+
+1. **Nobody finds it** (RESEARCH.md R-01; COMPETITORS.md §6).
+   - No budget, and paid installs lose money (§3).
+   - Not fatal: share cards and the testers' Tamil Nadu bus-fan circles are the way through. It's a cost every small competitor lives with.
+2. **Wrong format for the fans** (COMPETITORS.md §2, §8).
+   - Indian bus fans search "bus simulator" (61) far more than "idle game" or "tycoon game" (1–2).
+   - Requests for Tamil Nadu content are about 1% of review text.
+   - Not fatal: v1 tests it, and the one-week check in §7 gives early warning.
+3. **Thin money by design.**
+   - Rewarded ads only (U-3), adults only (P-5), and India's ad rates leave ≈₹0.29 per daily player per day.
+   - Even a loved game needs ≈1,150 daily players for ₹10,000.
+   - Not fatal: the levers are purchases and, later, more countries (only after a legal check, P-1). **Relaxing U-3 or P-5 is not a lever.**
+
+RESEARCH.md found nothing that stops it outright.
+
+### 7. The cheapest test
+
+**The first version is the test** of the number in §5. It costs ₹0 in cash, and nothing cheaper measures installs per day from Google Play.
+
+A **one-week early warning**, run alongside M0 so it doesn't delay the build:
+1. Once M0 produces the first side-view bus, make three static "my bus" cards: one bus in three player-made liveries, saying "Bus Captain — run your own Tamil Nadu bus company". The 20 testers post them in Tamil Nadu bus-fan WhatsApp groups and Instagram stories. Count people *outside the testers' own circles* who ask to join the test.
+2. Hold **ten conversations** with Tamil Nadu bus fans: "Would you play a game where you *run* the bus company instead of driving?"
+
+**Go:** at least **30 outsiders** ask to join within 7 days, and at least **6 of 10** fans say yes and name what they'd want. **If both fail**, rethink the format before M3; don't stop the build on this alone.
+
+### 8. The verdict
+
+**DO IT — it rests on ASSUMED reach numbers; the first version is the test.**
+
+Why:
+- **It's not DROP IT:** there's no fatal finding, and the best case beats the bar 12×.
+- **It's not a plain DO IT:** the likely case reaches only 39% of the bar, and getting there needs a RARE ~260 organic installs a day. By the rules that's TEST FIRST.
+- **The only test that measures that number is the first version itself.** It fits what you can put in (₹0 cash, about 12 weeks at 10 h a week). So the verdict is DO IT, with this stop rule.
+
+**STOP RULE:** on **day 90 after public launch** (about late May 2027 if launch is late Feb 2027), look at Play Console. **If new installs average under 100 a day over the last 30 days, stop:**
+- no paid legal advice;
+- no v1.1 or v1.2 work;
+- the game stays up at ₹0 a month.
+
+Otherwise continue to ads (v1.1), and check the bar itself at **month 12** (about Feb 2028).
+
+**What would move the likely case to the bar:** any one of —
+- installs ×2.6 (share cards working, or a fan-page creator picking it up);
+- retention ×2.6;
+- income per player ×2.6 (more purchases — not more ads).
+
+SCORE — first version: ~12 weeks (9 build + 3 store wait) · likely at month 12: ~₹3,900/month (bar ₹10,000) · needs: organic installs ≈260/day (likely ~100) · DO IT — v1 is the test; stop if under 100 installs/day on day 90
