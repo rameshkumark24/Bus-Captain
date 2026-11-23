@@ -1,7 +1,7 @@
 # Bus Captain — Product Definition (IDEA.md)
 
 > **Status:** agreed with the owner on 2026-11-23. This file is the source of truth for every later step — read it, not the chat history.
-> **Research:** risks, legal and store findings are in [RESEARCH.md](RESEARCH.md); competitors are in [COMPETITORS.md](COMPETITORS.md). The research rules P-1…P-14 were **approved by the owner on 2026-11-23** and are listed at the end of this file under "Rules adopted from research".
+> **Research:** risks, legal and store findings are in [RESEARCH.md](RESEARCH.md); competitors and the USP are in [COMPETITORS.md](COMPETITORS.md). The research rules P-1…P-14 (approved 2026-11-23) and the USP rules U-1…U-6 (approved 2026-11-24) are listed at the end of this file under "Rules adopted from research and the USP".
 > **Legal status:** nothing found blocks launch. Professional advice is still needed **before ads (v1.1)** and **before in-app purchases (v1.2)** — see RESEARCH.md L-16. v1 needs none.
 
 **Labels:** **[F]** FACT — the owner said or decided it · **[A]** ASSUMPTION — inferred; correct it if wrong · **[Q]** OPEN QUESTION — nobody knows yet.
@@ -78,9 +78,9 @@
   - Play Games achievements; checksummed local save; optional cloud save.
 - **M5 — money.**
   - AdMob rewarded ads, always optional: 2× offline earnings, Rush Hour, free upgrade.
-  - Interstitials at most once per 10 minutes of active play, never in the first session; no banner on the main screen.
-  - UMP consent for the EEA and UK.
-  - IAP: Remove Ads (₹99 / $1.99), livery pattern packs (₹49), starter pack (₹79), restore purchases. No pay-to-win walls.
+  - ~~Interstitials at most once per 10 minutes of active play, never in the first session~~ — **superseded 2026-11-24 by U-3: no interstitials at all, rewarded ads only.** No banner on the main screen.
+  - UMP consent for the EEA and UK (not needed while P-1 keeps distribution India-only).
+  - IAP: Remove Ads (₹99 / $1.99), livery pattern packs (₹49), starter pack (₹79), restore purchases. No pay-to-win walls. [A] With no forced ads (U-3), "Remove Ads" becomes a ₹99 "skip the ad" pass: rewarded boosts without watching. Owner to confirm before v1.2.
   - TEST ad IDs until the owner says release.
 - **M6 — release prep.**
   - Privacy policy on GitHub Pages and Data safety answers; target audience 13+; content rating.
@@ -264,6 +264,7 @@ The differentiator lives *inside* the loop: the buses you watch fill up are the 
 - **Prestige** — without it, content ends in a few days and the 7- and 28-day numbers mean nothing.
 - **Livery v1:** palettes, 6 patterns (2 kolam-style), Tamil or English name board, fictional plate, apply to one bus or all; one original horn.
 - Share card with the game's name and a tagged Play link.
+- **U-1:** a "paint your bus" moment in the first minute (6 colours + company name on the board), and a "Share your bus" prompt after the first city unlock.
 - English and Tamil; save system with backups; Auto Backup; Stats screen.
 - Behind the scenes: Tamil text spike, economy module, simulator, unit tests.
 
@@ -273,7 +274,7 @@ The differentiator lives *inside* the loop: the buses you watch fill up are the 
 
 **Build order to v1** [A]: M0 → M1 → M2-lite (3 cities, 2 tiers, 4 models) → M3-lite (livery v1 + share card) → prestige from M4 → M6-lite (privacy policy, Data safety, listing) → closed test → production.
 **After v1** [F, P-5]:
-- **v1.1 = ads only**: rewarded ads first, plus the M5 interstitial rules. Shown only to players who declare 18+ on a neutral age screen, which runs before any ad or analytics code starts. Under-18s play ad-free with no analytics.
+- **v1.1 = ads only**: **rewarded ads only, no interstitials (U-3)**. Shown only to players who declare 18+ on a neutral age screen, which runs before any ad or analytics code starts. Under-18s play ad-free with no analytics.
 - **v1.2 = in-app purchases**, after the public-address decision and legal advice.
 - Then the rest of M2–M5.
 
@@ -304,9 +305,18 @@ The differentiator lives *inside* the loop: the buses you watch fill up are the 
 
 ---
 
-## Rules adopted from research — APPROVED by the owner 2026-11-23 [F]
+## Rules adopted from research and the USP — APPROVED by the owner [F]
 
-These are product rules now. Each points to its finding in RESEARCH.md. Later steps must follow them.
+These are product rules now. P-items (approved 2026-11-23) point to findings in RESEARCH.md; U-items (approved 2026-11-24) point to the USP section of COMPETITORS.md. Later steps must follow them.
+
+| ID | Rule (USP, approved 2026-11-24) | Why (COMPETITORS.md "USP") |
+|---|---|---|
+| U-1 | A "paint your bus" moment in the first minute (6 colours + company name on the board); a "Share your bus" prompt after the first city unlock | Makes the USP visible within 60 seconds |
+| U-2 | Store page: icon and screenshots 1–2 show a player-painted bus at a Tamil-signed bus stand; first line "Run your own Tamil Nadu bus company" (Tamil and English); never name other apps | The USP has to sell before install |
+| U-3 | No interstitial ads, ever: rewarded ads only, opt-in, never blocking progress | Turns competitors' #1 complaint into our promise |
+| U-4 | Answer every Play review within 48 hours | Big competitors answer almost none |
+| U-5 | A native-speaker check of every Tamil string and sign is a release gate | One "Hindi signs in Coimbatore" moment kills the USP |
+| U-6 | The closed test asks every tester: "How would you describe this game to a friend?" | Proof the USP is noticed |
 
 | ID | Rule | Why (RESEARCH.md) |
 |---|---|---|
