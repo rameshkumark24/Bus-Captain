@@ -275,7 +275,7 @@ The differentiator lives *inside* the loop: the buses you watch fill up are the 
 **Build order to v1** [A]: M0 → M1 → M2-lite (3 cities, 2 tiers, 4 models) → M3-lite (livery v1 + share card) → prestige from M4 → M6-lite (privacy policy, Data safety, listing) → closed test → production.
 **After v1** [F, P-5]:
 - **v1.1 = ads only**: **rewarded ads only, no interstitials (U-3)**. Shown only to players who declare 18+ on a neutral age screen, which runs before any ad or analytics code starts. Under-18s play ad-free with no analytics.
-- **v1.2 = in-app purchases**, after the public-address decision and legal advice.
+- **v1.2 = in-app purchases**, after legal advice. From then your home address shows on the store page; you accepted that on 2026-11-24 (RESEARCH.md L-12).
 - Then the rest of M2–M5.
 
 **Timing** [A]: about 6–8 weeks of building, then 14 days of closed test, then ~1 week of production review. Owner's time is not a constraint [F]. Tamil New Year (mid-April 2027) is a realistic launch moment.
@@ -288,6 +288,7 @@ The differentiator lives *inside* the loop: the buses you watch fill up are the 
 - **What I can put in:**
   - [F] "Ready to put time, if it's worth it"; "time no issue" (2026-11-23).
   - [F] **No more money spent without returns.**
+  - [F] **Home address public from v1.2** ("okay to give address", 2026-11-24). It's the free way to sell in-app purchases: no organisation account needed (RESEARCH.md L-12).
   - [A] "Worth it" is defined by the §7 gate.
 - **What I already have:**
   - [F] A **personal** Google Play developer account. [Q] Creation date; [A] after 13 Nov 2023, so the 12-tester rule applies.
@@ -324,7 +325,7 @@ These are product rules now. P-items (approved 2026-11-23) point to findings in 
 | P-2 | Settings gets a **"Help & complaints"** row: support email, named grievance contact, "reply within 48 h, resolve within 30 days". Still 15 screens | L-10, L-11 |
 | P-3 | Use a **dedicated free support email**, not a personal one | L-11 |
 | P-4 | Auto Backup only with client-side encryption (`requireFlags="clientSideEncryption"`), so the Data safety form can truthfully say "no data collected" | L-06 |
-| P-5 | **Money in two steps.** v1.1 = ads only (rewarded first; interstitial rules as in M5), shown only to players who declare 18+ on a neutral age screen *before* any SDK starts; under-18s play ad-free with no analytics. v1.2 = in-app purchases, after the public-address decision and advice | L-05, L-12, L-16 |
+| P-5 | **Money in two steps.** v1.1 = ads only (rewarded first; interstitial rules as in M5), shown only to players who declare 18+ on a neutral age screen *before* any SDK starts; under-18s play ad-free with no analytics. v1.2 = in-app purchases, after advice. They make the owner's home address public, which the owner accepted on 2026-11-24 | L-05, L-12, L-16 |
 | P-6 | **Never sell coins.** The starter pack gives cosmetics and a permanent time boost, not coins. Nothing bought can be risked for a chance at more: no spins, bets, mystery boxes or double-or-nothing | L-09, L-10 |
 | P-7 | Offer and ad UI rules: no fake countdown timers, no guilt-trip "No thanks" text, no repeated nagging; "No thanks" is as visible as "Yes" | L-09 |
 | P-8 | Package name `io.github.rameshkumark24.busgame` (neutral). Play Store search done 2026-11-23 (no game by that name). **IP India trademark search still to do before the first upload** | L-14 |
@@ -431,7 +432,7 @@ Time:
 - Legal advice before v1.1 (DPDP, age gating, ads) and before v1.2 (e-commerce terms). Price NOT VERIFIED; ASSUMED ₹5,000–₹15,000 per consultation — get two or three quotes.
 - A chartered accountant once money arrives: ASSUMED ₹2,000–₹5,000 a year.
 - A trademark filing, optional: fee NOT VERIFIED here.
-- An organisation account, only if you want your home address off the store page (L-12).
+- An organisation account: **not needed**. You accepted showing your home address from v1.2 (2026-11-24). If you change your mind, it costs about ₹9,500–₹22,000 in the first year (RESEARCH.md L-12).
 
 **To run each month:**
 - **₹0 fixed**: no hosting, no paid APIs.

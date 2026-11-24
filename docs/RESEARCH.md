@@ -1,6 +1,6 @@
 # Bus Captain — Research: risks, legal & compliance, store rejection
 
-> Researched **2026-11-23** against [IDEA.md](IDEA.md). Competitors are deliberately excluded; they're the next step.
+> Researched **2026-11-23** against [IDEA.md](IDEA.md). L-12 decided and updated 2026-11-24. Competitors are deliberately excluded; they're the next step.
 > **Not legal advice.** Neither the owner nor the author is a lawyer. §2.16 separates "get advice" items from "standard practice" and says **when** each is needed.
 
 ## How to read this
@@ -32,7 +32,7 @@ Where the owner hasn't said, these are the author's most likely case:
 **Nothing found stops the product.** No risk is classed STOPS IT. The changes it forces are P-1…P-14 at the end of IDEA.md, **approved by the owner on 2026-11-23**. That does not mean "no legal work": the advice items in §2.16 remain, before ads (v1.1) and before purchases (v1.2). The five that matter most:
 
 1. **Ads go only to players who say they are 18+**, on a neutral age screen shown before any ad or analytics code starts. Under-18s play ad-free. Reason: India's DPDP law treats under-18s as children, and Play tells developers to follow local child-age laws. (L-05)
-2. **Money comes in two steps: ads first, purchases later.** Selling anything through Play makes your full legal address public on the store page; ads alone don't. (L-12)
+2. **Money comes in two steps: ads first, purchases later.** Selling anything through Play makes your full legal address public on the store page; ads alone don't. The owner accepted this on 2026-11-24, so purchases (v1.2) will show the home address. (L-12)
 3. **Never sell coins, and never let anything bought be risked for a chance at more.** India's 2025 gaming law counts purchased virtual coins as "stakes"; offering a money game is a crime. (L-10)
 4. **Have a complaints route from v1.** India's 2026 gaming rules already require one for social games, and the e-commerce rules require one once you sell. It is one Settings row plus a support email. (L-10, L-11)
 5. **Launch in India only.** This avoids GDPR, UK GDPR, COPPA and every other country's rules until revenue justifies checking them. (L-02, L-03)
@@ -59,7 +59,7 @@ Where the owner hasn't said, these are the author's most likely case:
 | 6 | R-06 | **Ad revenue lower than hoped.** India's ad rates are low, and ads go to 18+ only | Dependency | 4 | 4 | 16 | COSTS | Yes | Ads-first sequencing; cosmetics as the second stream; decide from real data | T4 — UNVERIFIED; confirm with v1.1 AdMob numbers |
 | 7 | R-07 | **The share card isn't shared** | Adoption | 4 | 4 | 16 | COSTS | No | Already in v1; measured by success check 2 | T4 |
 | 8 | R-08 | **Bus art not layered from M1**, forcing a redraw of every bus at M3 | Technical | 4 | 4 | 16 | COSTS | Yes | Build buses from greyscale masks from M1; 15 models = variations of 3–4 shapes | T4 — UNVERIFIED; confirmed when M3 needs no redraw |
-| 9 | R-09 | **Home address published once you sell anything** (personal account) | Dependency | 5 | 3 | 15 | COSTS | Yes | P-5: ads before purchases; decide on the address before v1.2 | S10 T1 |
+| 9 | R-09 | **Home address published once you sell anything** (personal account) | Dependency | 5 | 3 | 15 | COSTS | Yes | P-5: ads before purchases. **Decided 2026-11-24: owner accepts the public address from v1.2** (L-12) | S10 T1 |
 | 10 | R-10 | **Save corrupted** when a low-RAM phone kills the app mid-write | Technical | 3 | 5 | 15 | COSTS | Yes | Write to a temp file then rename; 2–3 rotating backups; checksum to detect damage | T4 — UNVERIFIED; confirm with a kill-during-save test in M1 |
 | 11 | R-11 | **NaN or overflow poisons the economy forever** | Technical | 3 | 5 | 15 | COSTS | Yes | Saturating maths, NaN guards on every write, unit tests | T4; confirmed by unit tests |
 | 12 | R-12 | **Android 16 behaviour.** Edge-to-edge can't be opted out; back key not delivered unless migrated | Technical | 5 | 3 | 15 | COSTS | Yes | Handle insets; back via `OnBackInvokedCallback` (or the temporary opt-out); use libGDX ≥ 1.14.1 | S18 T1, S34 T1 |
@@ -314,15 +314,36 @@ Every finding uses the same format: **What** · **Why here** · **Forces** · **
   - **A chartered accountant once revenue starts:** GST and income tax. That isn't a launch cost.
 
 ### L-12 Your address goes public once you sell anything
-- **What:** "Merchant accounts" — developer accounts with paid apps or in-app purchases — must display their **full address** on Google Play (S10 T1).
+- **What:** "merchant accounts (developer accounts with apps that monetize via paid apps or in-app purchases) must show their full address on Google Play. The address used is the one taken from the Google payments profile" (S10 T1, read in full 2026-11-24). Google's stated reason: "to comply with consumer protection laws".
+- **The Indian rule behind it:** marketplaces must display each seller's "name of their business, whether registered or not, their geographic address, customer care number" (E-Commerce Rules 2020, r.5(3)(a); S30 T1). So every route shows *an* address; the routes differ only in whose.
 - **Why here:** on a personal account [A] that is your home address, permanently scrapeable.
+- **What else a personal account makes public** (S10 T1):
+  - The developer name and the store-listing email. Both are public from v1; the email is the dedicated support address (P-3).
+  - A public phone number is required only from Korea-based developers. The store-listing phone is optional. [A] Leave it blank unless the v1.2 advice says r.5(3)(a)'s "customer care number" needs one.
 - **Forces (P-5):**
-  - v1.1 is ads-only. [A] An ads-only app has no merchant account, so the address isn't shown, based on S10's "paid apps or in-app purchases" wording. Confirm in Play Console before enabling.
+  - v1.1 is ads-only. [A] An ads-only app has no merchant account, so the address isn't shown, based on S10's "paid apps or in-app purchases" wording.
+    - Confirm on Play Console's **Play developer profile** page (Manage account › Account details). Google says it shows all the information that may be public.
+    - Check before enabling ads, and again before the first in-app product.
   - Before v1.2, choose:
     - (a) accept;
     - (b) an organisation account, which needs a registered business + D-U-N-S number and an app transfer. That's effort and possibly cost, so it needs your yes;
     - (c) stay ads-only.
-- **Advice?** Optional; it's your decision. **Before v1.2.**
+- **DECIDED 2026-11-24 [F]: (a) accept.**
+  - The owner first asked to keep the address private. After seeing the cost of (b), they chose to show it ("okay to give address").
+  - It appears from v1.2 only; v1 and v1.1 show none.
+- **Fallback (b), if the owner changes their mind** (checked 2026-11-24):
+  1. **A sole proprietorship at a non-home address**, either:
+     - a virtual office in Coimbatore: ₹599–₹1,400 a month, or about ₹16,000–₹20,000 a year (S54); or
+     - a relative's or friend's business address, with their written permission. That's free, but their address becomes public instead.
+  2. **A D-U-N-S number in exactly that name and address.**
+     - It's free from Dun & Bradstreet and takes up to 30 days. Avoid paid third-party services (S51, S53 T1).
+     - It must match the payments profile exactly.
+     - UNVERIFIED whether D&B and Google accept a virtual-office address. Ask both before paying.
+  3. **A new organisation developer account:** US$25 (≈ ₹2,340). It publicly shows the organisation name, D-U-N-S number, address, developer email and developer phone (S10 T1).
+  4. **Transfer the app.** Users, download stats, ratings and reviews move; test groups don't (S52 T1).
+  - **Cost:** about ₹9,500–₹22,000 in the first year, or ≈ ₹2,340 with a family address. Each paid item needs the owner's yes.
+  - It cannot un-publish an address already shown: copies scraped earlier stay out there.
+- **Advice?** None needed; the decision is made.
 
 ### L-13 Licences — code, fonts, art, sound, maps
 
@@ -393,7 +414,7 @@ Every finding uses the same format: **What** · **Why here** · **Forces** · **
 | Selling coins under the gaming law | **Advice only if you choose to sell coins**; otherwise P-6 is standard practice | Before v1.2 | No |
 | GST, income tax, invoices | **Get advice (CA)** | Once revenue starts / approaches the GST threshold | No — paid from revenue |
 | GDPR, UK, US or any other country | **Get advice** | Only before distributing there | No |
-| Organisation account vs public home address | Your decision; advice optional | Before v1.2 | No |
+| Organisation account vs public home address | Your decision — **made 2026-11-24: show the home address** (L-12) | Before v1.2 | No |
 
 ---
 
@@ -431,7 +452,7 @@ Dates are the source's own date where shown. "Undated" = the page shows no date.
 | S07 | Google Play — Payments policy — https://support.google.com/googleplay/android-developer/answer/9858738 | © 2026 | T1 | Read in full |
 | S08 | Google Play — Service fees — https://support.google.com/googleplay/android-developer/answer/112622 | Undated | T1 | Read in full |
 | S09 | Google Play — Withholding tax (India PAN 0.1% / 5%, Form 131) — https://support.google.com/googleplay/android-developer/answer/9384608 | Undated | T1 | Read in full |
-| S10 | Google Play — Developer information shown on Google Play (full address for merchant accounts) — https://support.google.com/googleplay/android-developer/answer/13634081 | Undated | T1 | Search excerpt (2026-11-22) |
+| S10 | Google Play — Developer information shown on Google Play (full address for merchant accounts) — https://support.google.com/googleplay/android-developer/answer/13634081 | Undated | T1 | Read in full (2026-11-24) |
 | S11 | Google Play — Advertising ID — https://support.google.com/googleplay/android-developer/answer/6048248 | Undated | T1 | Search excerpt |
 | S12 | Google Play — User generated content — https://support.google.com/googleplay/android-developer/answer/9876937 | Undated | T1 | Search excerpt |
 | S13 | Google Play — Metadata policy — https://support.google.com/googleplay/android-developer/answer/9898842 | Undated (title limit since 2021) | T1 | Search excerpt |
@@ -472,6 +493,10 @@ Dates are the source's own date where shown. "Undated" = the page shows no date.
 | S50 | Google Play — "Rapido Captain: Drive & Earn" (com.rapido.rider, 50M+) — https://play.google.com/store/apps/details?id=com.rapido.rider | 2026-11-23 | T1 | Opened (title, downloads, developer) |
 | S46 | GameAnalytics mobile benchmarks 2025 (75% of projects have day-28 retention under 3%) — https://gamedevreports.substack.com/p/gameanalytics-mobile-gaming-benchmarks | 2025 | T2 | Search excerpt |
 | S47 | Google Payments — Tax information for India (India-based developers determine their own GST) — https://support.google.com/paymentscenter/answer/7421525 | Undated | T1 | Search excerpt |
+| S51 | Google Play — Required information to create a developer account (organisations need a D-U-N-S number; free from D&B, up to 30 days) — https://support.google.com/googleplay/android-developer/answer/13628312 | Undated | T1 | Read (2026-11-24) |
+| S52 | Google Play — Transfer apps to a different developer account (users, stats, ratings and reviews move; test groups don't) — https://support.google.com/googleplay/android-developer/answer/6230247 | Undated | T1 | Read (2026-11-24) |
+| S53 | Google Payments — Add a D-U-N-S number to your payments profile (name and address must match D&B exactly) — https://support.google.com/paymentscenter/answer/13992651 | Undated | T1 | Read (2026-11-24) |
+| S54 | Virtual-office price pages, Coimbatore ("from" prices: RegisterKaro ₹599/month; IncorpX ₹999/month + 18% GST; Regus ₹1,400/month; Cofynd ₹16,000–₹19,999/year) — https://www.registerkaro.in/virtual-office-in-coimbatore · https://www.incorpx.io/virtual-office-in-coimbatore · https://www.regus.com/en-gb/india/coimbatore/virtual-offices · https://cofynd.com/virtual-office/coimbatore | 2026-11-24 | T1 (vendors' own prices) | Search excerpts |
 
 **Known gaps** (would strengthen this document):
 - DPDP Act s.9 and Rule 10 in their own words (India Code refuses automated reading). Read them from a browser.
@@ -479,4 +504,4 @@ Dates are the source's own date where shown. "Undated" = the page shows no date.
 - The IP India trademark search for "Bus Captain" (owner task; the Play Store search is done).
 - Laws in the Tamil-diaspora countries.
 - Play Billing's Data safety treatment.
-- Whether an ads-only account shows the address.
+- Whether an ads-only account shows the address. Check Play Console's Play developer profile page before v1.1 (L-12).
